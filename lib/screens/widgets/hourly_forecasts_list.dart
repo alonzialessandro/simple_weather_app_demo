@@ -11,7 +11,7 @@ class HourlyForecastsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-
+    final formattedDate = dateFormat.format(currentDayForecasts.first.date);
     return Column(
       children: <Widget>[
         Padding(
@@ -20,21 +20,21 @@ class HourlyForecastsList extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Today',
+                formattedDate,
                 textAlign: TextAlign.start,
                 style: textTheme.headline4!
-                    .copyWith(fontSize: 17, fontWeight: FontWeight.bold),
+                    .copyWith(fontSize: 14.5, fontWeight: FontWeight.bold),
               ),
               Text(
                 'Hourly forecasts',
                 textAlign: TextAlign.start,
                 style: textTheme.bodyText1!
-                    .copyWith(fontSize: 15.5, color: kAccentColor),
+                    .copyWith(fontSize: 14, color: kAccentColor),
               ),
             ],
           ),
         ),
-        const SizedBox(height: 20.0),
+        const SizedBox(height: 15.0),
         SizedBox(
           height: MediaQuery.of(context).size.width * 0.33,
           child: ListView.builder(

@@ -29,7 +29,7 @@ class MainWeatherInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Image.asset(Weather.getWeatherAssetsImages(weatherCode),
-              height: 164, fit: BoxFit.cover),
+              height: 145, fit: BoxFit.cover),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

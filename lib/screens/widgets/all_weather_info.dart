@@ -37,17 +37,10 @@ class AllWeatherInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    final formattedDate =
-        dateFormat.format(currentDayWeatherForecasts.first.date);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 17.0),
       child: ListView(
         children: <Widget>[
-          Text(
-            formattedDate,
-            textAlign: TextAlign.center,
-            style: textTheme.bodyText1!.copyWith(fontSize: 15.5),
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
